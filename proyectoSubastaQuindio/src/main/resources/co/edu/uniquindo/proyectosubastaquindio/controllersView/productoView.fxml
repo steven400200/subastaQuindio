@@ -9,31 +9,32 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="866.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindo.proyectosubastaquindio.controllersView.CrudProductoControllerView">
    <children>
       <TabPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="586.0" prefWidth="866.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="Untitled Tab 1">
+          <Tab text="Producto">
                <content>
                   <AnchorPane prefHeight="537.0" prefWidth="850.0">
                      <children>
                         <Pane fx:id="panePrincipal" layoutX="5.0" layoutY="7.0" prefHeight="545.0" prefWidth="858.0">
                            <children>
-                              <Pane fx:id="paneTable" layoutX="3.0" layoutY="42.0" prefHeight="230.0" prefWidth="850.0" styleClass="button" stylesheets="@../css/prodcutoCss.css">
+                              <Pane fx:id="paneTable" layoutX="16.0" layoutY="35.0" prefHeight="222.0" prefWidth="830.0" styleClass="button" stylesheets="@../css/prodcutoCss.css">
                                  <children>
-                                    <TableView fx:id="tableDatos" layoutX="24.0" layoutY="15.0" onMouseClicked="#selccionar" prefHeight="200.0" prefWidth="803.0">
+                                    <TableView fx:id="tableDatos" layoutX="16.0" layoutY="11.0" onMouseClicked="#selccionar" prefHeight="200.0" prefWidth="808.0">
                                        <columns>
-                                          <TableColumn fx:id="columnaUno" prefWidth="241.0" text="nombre Producto" />
-                                          <TableColumn fx:id="columnaDos" prefWidth="138.0" text="descripcion" />
-                                          <TableColumn fx:id="columnaTres" prefWidth="241.0" text="nombre Anunciante" />
-                                          <TableColumn fx:id="columnaCuatro" prefWidth="138.0" text="valorInicial" />
-                                          <TableColumn fx:id="columnaCinco" prefWidth="241.0" text="fecha publicacion" />
+                                          <TableColumn fx:id="columnaUno" prefWidth="193.0" text="Nombre articulo" />
+                                          <TableColumn fx:id="columnaDos" prefWidth="216.0" text="Descripcion" />
+                                          <TableColumn fx:id="columnaTres" prefWidth="246.0" text="Nombre anunciante" />
+                                          <TableColumn fx:id="columnaCuatro" prefWidth="151.0" text="Valor inicial" />
+                                          <TableColumn fx:id="columnaCinco" prefWidth="193.0" text="fecha publicacion" />
                                           <TableColumn fx:id="columna6" prefWidth="138.0" text="fecha final" />
                                           <TableColumn fx:id="columna7" prefWidth="241.0" text="tipo articulo" />
                                           <TableColumn fx:id="columna8" prefWidth="241.0" text="Url" />
@@ -42,48 +43,65 @@
                                     </TableView>
                                  </children>
                               </Pane>
-                              <Pane fx:id="paneCampos" layoutX="8.0" layoutY="272.0" prefHeight="190.0" prefWidth="840.0" styleClass="button" stylesheets="@../css/prodcutoCss.css">
+                              <Pane fx:id="paneCampos" layoutX="17.0" layoutY="266.0" prefHeight="190.0" prefWidth="827.0" styleClass="button" stylesheets="@../css/prodcutoCss.css">
                                  <children>
-                                    <Label fx:id="lblNombreProducto" alignment="BOTTOM_RIGHT" layoutX="303.0" layoutY="18.0" prefHeight="21.0" prefWidth="97.0" stylesheets="@../css/prodcutoCss.css" text="Nombre produto" />
-                                    <TextField fx:id="txtNombreAnunciante" layoutX="113.0" layoutY="16.0" prefHeight="25.0" prefWidth="182.0" promptText="Nombre de Anunciante" styleClass="TextField" stylesheets="@../css/prodcutoCss.css" />
-                                    <Label fx:id="lblDescripcion" alignment="BASELINE_LEFT" layoutX="335.0" layoutY="66.0" prefHeight="21.0" prefWidth="65.0" stylesheets="@../css/prodcutoCss.css" text="Descripcion" />
-                                    <TextField fx:id="txtDescripcion" layoutX="404.0" layoutY="64.0" prefHeight="25.0" prefWidth="181.0" promptText="Descripcion" styleClass="TextField" stylesheets="@../css/prodcutoCss.css" />
-                                    <Label fx:id="lblNombreAnunciante" alignment="BOTTOM_RIGHT" layoutY="18.0" prefHeight="21.0" prefWidth="109.0" text="Nombre anunciante" />
-                                    <TextField fx:id="txtUrlFoto" layoutX="404.0" layoutY="108.0" prefHeight="25.0" prefWidth="182.0" promptText="Url de foto" styleClass="TextField" stylesheets="@../css/prodcutoCss.css" />
-                                    <Label fx:id="lblValor" alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" layoutX="335.0" layoutY="153.0" prefHeight="21.0" prefWidth="65.0" text="Valor" />
-                                    <TextField fx:id="txtNombreProducto" layoutX="404.0" layoutY="16.0" prefHeight="25.0" prefWidth="182.0" promptText="Nombre del Producto" styleClass="TextField" stylesheets="@../css/prodcutoCss.css" />
-                                    <DatePicker fx:id="dateFechaInical" layoutX="113.0" layoutY="65.0" prefHeight="25.0" prefWidth="182.0" promptText="fecha inicial" styleClass="TextField" stylesheets="@../css/prodcutoCss.css" />
-                                    <DatePicker fx:id="dateFechaFinal" layoutX="113.0" layoutY="109.0" prefHeight="25.0" prefWidth="182.0" promptText="Fceha final" styleClass="TextField" stylesheets="@../css/prodcutoCss.css" />
-                                    <Label fx:id="lblFechaInicial" alignment="BOTTOM_RIGHT" layoutX="17.0" layoutY="66.0" prefHeight="21.0" prefWidth="91.0" text="Fecha Inicial" />
-                                    <Label fx:id="lblFcehaInicial" alignment="BOTTOM_RIGHT" layoutY="111.0" prefHeight="21.0" prefWidth="109.0" text="Fecha final" />
-                                    <ComboBox fx:id="comboTipoProducto" layoutX="114.0" layoutY="151.0" prefHeight="25.0" prefWidth="182.0" promptText="Tipo de producto" styleClass="TextField" stylesheets="@../css/prodcutoCss.css" />
-                                    <Label fx:id="lblTipoProducto" alignment="BOTTOM_RIGHT" layoutX="14.0" layoutY="149.0" prefHeight="21.0" prefWidth="97.0" text="Tipo de Producto" />
-                                    <Button fx:id="btnImportar" layoutX="661.0" layoutY="151.0" mnemonicParsing="false" onAction="#importar" prefHeight="25.0" prefWidth="137.0" text="Importar" />
-                                    <TextField fx:id="txtValor" layoutX="404.0" layoutY="150.0" prefHeight="25.0" prefWidth="182.0" promptText="valor" styleClass="TextField" stylesheets="@../css/prodcutoCss.css" />
-                                    <Label fx:id="lblUrlFoto" alignment="CENTER_RIGHT" layoutX="335.0" layoutY="110.0" prefHeight="21.0" prefWidth="65.0" text="URL foto" />
+                                    <Label fx:id="lblNombreProducto" alignment="CENTER" contentDisplay="RIGHT" layoutX="318.0" layoutY="18.0" prefHeight="21.0" prefWidth="129.0" stylesheets="@../css/prodcutoCss.css" text="Nombre producto" />
+                                    <TextField fx:id="txtNombreAnunciante" layoutX="131.0" layoutY="16.0" prefHeight="25.0" prefWidth="182.0" promptText="Nombre del anunciante" styleClass="TextField" stylesheets="@../css/prodcutoCss.css" />
+                                    <Label fx:id="lblDescripcion" alignment="BOTTOM_RIGHT" layoutX="324.0" layoutY="67.0" prefHeight="21.0" prefWidth="109.0" stylesheets="@../css/prodcutoCss.css" text="Descripcion" />
+                                    <TextField fx:id="txtDescripcion" layoutX="447.0" layoutY="64.0" prefHeight="25.0" prefWidth="181.0" promptText="Descripcion" styleClass="TextField" stylesheets="@../css/prodcutoCss.css" />
+                                    <Label fx:id="lblNombreAnunciante" alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="9.0" layoutY="18.0" prefHeight="21.0" prefWidth="117.0" text="Nombre anunciante" textAlignment="CENTER" />
+                                    <TextField fx:id="txtUrlFoto" layoutX="447.0" layoutY="108.0" prefHeight="25.0" prefWidth="182.0" promptText="Url foto" styleClass="TextField" stylesheets="@../css/prodcutoCss.css" />
+                                    <Label fx:id="lblValor" alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" layoutX="325.0" layoutY="149.0" prefHeight="21.0" prefWidth="108.0" text="Valor" />
+                                    <TextField fx:id="txtNombreProducto" layoutX="446.0" layoutY="16.0" prefHeight="25.0" prefWidth="182.0" promptText="Nombre del producto" styleClass="TextField" stylesheets="@../css/prodcutoCss.css" />
+                                    <DatePicker fx:id="dateFechaInical" layoutX="131.0" layoutY="64.0" prefHeight="25.0" prefWidth="182.0" promptText="Fecha inicial" styleClass="TextField" stylesheets="@../css/prodcutoCss.css" />
+                                    <DatePicker fx:id="dateFechaFinal" layoutX="131.0" layoutY="109.0" prefHeight="25.0" prefWidth="182.0" promptText="Fecha final" styleClass="TextField" stylesheets="@../css/prodcutoCss.css" />
+                                    <Label fx:id="lblFechaInicial" alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="17.0" layoutY="66.0" prefHeight="21.0" prefWidth="109.0" stylesheets="@../css/prodcutoCss.css" text="Fecha inicial">
+                                       <font>
+                                          <Font name="Comic Sans MS" size="12.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblFcehaInicial" alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="17.0" layoutY="111.0" prefHeight="21.0" prefWidth="109.0" text="Fecha final" />
+                                    <ComboBox fx:id="comboTipoProducto" editable="true" layoutX="131.0" layoutY="152.0" prefHeight="25.0" prefWidth="182.0" promptText="Tipo de producto" styleClass="TextField" stylesheets="@../css/prodcutoCss.css" />
+                                    <Label fx:id="lblTipoProducto" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="154.0" prefHeight="21.0" prefWidth="115.0" text="Tipo de Producto" />
+                                    <Button fx:id="btnImportar" layoutX="661.0" layoutY="147.0" mnemonicParsing="false" onAction="#importar" prefHeight="33.0" prefWidth="137.0" text="Importar">
+                                       <font>
+                                          <Font name="Comic Sans MS Bold" size="13.0" />
+                                       </font></Button>
+                                    <TextField fx:id="txtValor" layoutX="447.0" layoutY="147.0" prefHeight="25.0" prefWidth="182.0" promptText="Valor" styleClass="TextField" stylesheets="@../css/prodcutoCss.css" />
+                                    <Label fx:id="lblUrlFoto" alignment="BOTTOM_RIGHT" layoutX="326.0" layoutY="110.0" prefHeight="21.0" prefWidth="107.0" text="URL foto">
+                                       <font>
+                                          <Font name="Comic Sans MS" size="11.0" />
+                                       </font></Label>
                                     <ImageView fx:id="imgFoto" fitHeight="120.0" fitWidth="133.0" layoutX="663.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" />
                                  </children>
                               </Pane>
-                              <Pane fx:id="paneBotones" layoutX="3.0" layoutY="477.0" prefHeight="75.0" prefWidth="818.0" styleClass="button" stylesheets="@../css/prodcutoCss.css">
+                              <Pane fx:id="paneBotones" layoutX="17.0" layoutY="469.0" prefHeight="68.0" prefWidth="829.0" styleClass="button" stylesheets="@../css/prodcutoCss.css">
                                  <children>
-                                    <Button fx:id="btnAgregar" layoutX="597.0" layoutY="13.0" mnemonicParsing="false" onAction="#agregar" prefHeight="42.0" prefWidth="105.0" stylesheets="@../css/prodcutoCss.css" text="Agregar" />
-                                    <Button fx:id="btnActualizar" layoutX="141.0" layoutY="13.0" mnemonicParsing="false" onAction="#Actualizar" prefHeight="42.0" prefWidth="105.0" text="Actualizar" />
-                                    <Button fx:id="btnEliminar" layoutX="374.0" layoutY="13.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="42.0" prefWidth="105.0" text="Eliminar" />
+                                    <Button fx:id="btnAgregar" layoutX="597.0" layoutY="13.0" mnemonicParsing="false" onAction="#agregar" prefHeight="42.0" prefWidth="105.0" stylesheets="@../css/prodcutoCss.css" text="Agregar">
+                                       <font>
+                                          <Font name="Comic Sans MS Bold" size="13.0" />
+                                       </font></Button>
+                                    <Button fx:id="btnActualizar" layoutX="141.0" layoutY="13.0" mnemonicParsing="false" onAction="#Actualizar" prefHeight="42.0" prefWidth="105.0" text="Actualizar">
+                                       <font>
+                                          <Font name="Comic Sans MS" size="13.0" />
+                                       </font></Button>
+                                    <Button fx:id="btnEliminar" layoutX="374.0" layoutY="13.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="42.0" prefWidth="105.0" text="Eliminar">
+                                       <font>
+                                          <Font name="Comic Sans MS" size="13.0" />
+                                       </font></Button>
                                  </children>
                               </Pane>
-                              <TextField fx:id="txtBuscador" layoutX="14.0" layoutY="15.0" prefHeight="27.0" prefWidth="262.0" />
-                              <ImageView fx:id="imgLupa" fitHeight="18.0" fitWidth="23.0" layoutX="15.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" rotate="-8.1">
-                                 <image>
-                                    <Image url="@../imagenes/lupa.png" />
-                                 </image>
-                              </ImageView>
+                              <Text fx:id="textTitulo" layoutX="28.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Lista producto" wrappingWidth="140.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
                            </children>
                         </Pane>
                      </children>
                   </AnchorPane>
                </content>
           </Tab>
-          <Tab text="Untitled Tab 2">
+          <Tab text="Anuncio">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
             </content>

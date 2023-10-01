@@ -1,6 +1,4 @@
-.TextField{
-    -fx-color: red;
-}
+
 .button{
 
     -fx-background-color: #40CBC0;
@@ -8,8 +6,15 @@
     -fx-border-color: white;
     -fx-border-radius: 3;
     -fx-border-radius: 10;
+    -fx-font-weight: bold;
 
 }
+.label{
+    -fx-font-weight: normal;
+
+
+}
+
 #paneCampos{
     -fx-background-color: #C9D5D4;
     -fx-border-color: #024056;
